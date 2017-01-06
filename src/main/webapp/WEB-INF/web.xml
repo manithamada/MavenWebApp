@@ -9,9 +9,22 @@
     <servlet-name>FirstServlet</servlet-name>
     <servlet-class>com.taran.ph.FirstServlet</servlet-class>
   </servlet>
-  
+
+  <servlet>
+    <servlet-name>BufferedServlet</servlet-name>
+    <servlet-class>com.taran.ph.BufferedServlet</servlet-class>
+  </servlet>
+
+  <!-- mappings -->
+
   <servlet-mapping>
     <servlet-name>FirstServlet</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>/first</url-pattern>
   </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>BufferedServlet</servlet-name>
+    <url-pattern>/buffered</url-pattern>
+  </servlet-mapping>
+
 </web-app>
