@@ -16,7 +16,6 @@ target/
 *.ipr
 .target
 .lib
-.target
 .target/
 
 ### NetBeans ###

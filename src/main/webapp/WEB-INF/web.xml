@@ -14,6 +14,11 @@
     <servlet-name>BufferedServlet</servlet-name>
     <servlet-class>com.taran.ph.BufferedServlet</servlet-class>
   </servlet>
+  
+  <servlet>
+    <servlet-name>FormServlet</servlet-name>
+    <servlet-class>com.taran.ph.FormServlet</servlet-class>
+  </servlet>
 
   <!-- mappings -->
 
@@ -25,6 +30,11 @@
   <servlet-mapping>
     <servlet-name>BufferedServlet</servlet-name>
     <url-pattern>/buffered</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>FormServlet</servlet-name>
+    <url-pattern>/cv</url-pattern>
   </servlet-mapping>
 
 </web-app>
