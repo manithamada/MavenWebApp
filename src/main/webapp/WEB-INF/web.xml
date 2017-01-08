@@ -25,6 +25,11 @@
         <servlet-class>com.taran.ph.servlets.CodeSampleServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>AccessCounterServlet</servlet-name>
+        <servlet-class>com.taran.ph.servlets.cookie.AccessCounterServlet</servlet-class>
+    </servlet>
+
     <!-- mappings -->
 
     <servlet-mapping>
@@ -45,6 +50,11 @@
     <servlet-mapping>
         <servlet-name>CodeSampleServlet</servlet-name>
         <url-pattern>/view-code</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AccessCounterServlet</servlet-name>
+        <url-pattern>/access-count</url-pattern>
     </servlet-mapping>
     
 </web-app>
