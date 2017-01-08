@@ -1,4 +1,4 @@
-package com.taran.ph;
+package com.taran.ph.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
