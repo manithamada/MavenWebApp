@@ -1,4 +1,4 @@
-package com.taran.ph.servlets.cookie;
+package com.taran.ph.utils;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
