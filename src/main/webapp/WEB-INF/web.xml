@@ -17,7 +17,7 @@
     </servlet>
 
     <listener>
-        <listener-class>SessionLifeCycleEventExample</listener-class>
+        <listener-class>com.taran.ph.eventlisteners.SessionLifeCycleEventExample</listener-class>
     </listener>
 
     <welcome-file-list>
