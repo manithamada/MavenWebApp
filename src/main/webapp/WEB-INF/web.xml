@@ -1,11 +1,33 @@
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://java.sun.com/xml/ns/javaee"
-         xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-         id="WebApp_ID" version="3.0">
+<web-app id="WebApp_ID" version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
     <display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <servlet-name>Jersey Web Application</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>com.sun.jersey.config.property.packages</param-name>
+            <param-value>com.taran.ph.rest</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <listener>
+        <listener-class>SessionLifeCycleEventExample</listener-class>
+    </listener>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <filter>
+        <filter-name>My filter</filter-name>
+        <filter-class>com.taran.ph.filters.HelloWorldFilter</filter-class>
+    </filter>
 
     <servlet>
         <servlet-name>FirstServlet</servlet-name>
@@ -31,13 +53,13 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
         <servlet-name>AccessCounterServlet</servlet-name>
         <servlet-class>com.taran.ph.servlets.cookie.AccessCounterServlet</servlet-class>
     </servlet>
-    
+
     <servlet>
         <servlet-name>Register</servlet-name>
         <servlet-class>com.taran.ph.servlets.UserRegistrationServlet</servlet-class>
     </servlet>
 
-    <!-- mappings -->
+     <!--mappings-->
 
     <servlet-mapping>
         <servlet-name>FirstServlet</servlet-name>
@@ -63,10 +85,20 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
         <servlet-name>AccessCounterServlet</servlet-name>
         <url-pattern>/access-count</url-pattern>
     </servlet-mapping>
-    
+
     <servlet-mapping>
         <servlet-name>Register</servlet-name>
         <url-pattern>/register-user</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Jersey Web Application</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
     
+    <filter-mapping>
+        <filter-name>My filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
 </web-app>
