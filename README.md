@@ -1,3 +1,3 @@
 # MavenWebApp
-Simple web app based on maven. Servlets + JSP.
+Simple web app based on maven. Servlets + JSP,.
 .
